@@ -13,4 +13,4 @@ Route::get('/', function () {
 
 Route::get('/register', 'ParticipantController@create')->name('register');
 
-
+Route::post('/register', 'ParticipantController@store');

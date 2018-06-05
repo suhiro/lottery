@@ -1,22 +1,19 @@
 @extends('layouts.master')
 @section('content')
+<form method="post" action="{{url('register')}}">
+	{{csrf_field()}}
 <div class="field">
-  <label class="label">Name</label>
+  <label class="label">First name</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input">
+    <input class="input" type="text" name="firstName" placeholder="First name as it appears on your government issued photo ID" required>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Username</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-    <span class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
+  <label class="label">Last name</label>
+  <div class="control">
+    <input class="input is-success" type="text" name="firstName" placeholder="Last name as it appears on your government issued photo ID" required>
+   
   </div>
   <p class="help is-success">This username is available</p>
 </div>
@@ -24,7 +21,7 @@
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+    <input class="input is-danger" type="email" name="email" placeholder="Entry code will be send to this email" value="">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -36,23 +33,20 @@
 </div>
 
 <div class="field">
-  <label class="label">Subject</label>
-  <div class="control">
-    <div class="select">
-      <select>
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </select>
-    </div>
+  <label class="label">Phone</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-danger" type="text" name="phone" placeholder="You maybe contacted through this phone number">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
   </div>
+  <p class="help is-danger">This email is invalid</p>
 </div>
 
-<div class="field">
-  <label class="label">Message</label>
-  <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
-  </div>
-</div>
+
 
 <div class="field">
   <div class="control">
@@ -63,25 +57,15 @@
   </div>
 </div>
 
-<div class="field">
-  <div class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-      No
-    </label>
-  </div>
-</div>
+
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link">Submit</button>
+    <button type="submit" class="button is-link">Submit</button>
   </div>
   <div class="control">
     <button class="button is-text">Cancel</button>
   </div>
 </div>
+</form>
 @endsection
