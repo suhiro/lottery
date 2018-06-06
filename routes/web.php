@@ -9,7 +9,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/register', 'ParticipantController@create')->name('register');
 

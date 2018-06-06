@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Participant;
 
 class ParticipantController extends Controller
 {
@@ -34,7 +35,30 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $validatedData = $request->validate([
+            'firstName' => 'required|max:32',
+            'lastName' => 'required|max:32',
+            'phone' => 'required|unique:participants|max:16',
+            'email' => 'required|unique:participants|max:100'
+        ]);
+        $participant = Participant::create([
+            'lottery_id' => 1,
+            'firstName' => $request->firstName,
+            'lastName' => $request->lastName,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'valid' => true,
+            'winner' => false,
+            'redeemed' => false,
+            'ip_address' => $request->ip(),
+            'location_id' => null,
+            'code' => strtoupper(str_random(6))
+        ]);
+        if($participant){
+            return view('result.submitted',compact('participant'));
+        } else {
+            return 'error';
+        }
     }
 
     /**
