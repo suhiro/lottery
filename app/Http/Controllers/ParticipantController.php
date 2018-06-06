@@ -54,8 +54,9 @@ class ParticipantController extends Controller
             'location_id' => null,
             'code' => strtoupper(str_random(6))
         ]);
+        $participants = Participant::where('lottery_id',1)->where('valid',true)->get();
         if($participant){
-            return view('result.submitted',compact('participant'));
+            return view('result.submitted',compact('participant','participants'));
         } else {
             return 'error';
         }

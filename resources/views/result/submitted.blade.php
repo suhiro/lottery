@@ -8,8 +8,11 @@
   </div>
   <div class="message-body">
     Your ballot code is <strong>{{$participant->code}}</strong>
+    <p>There are currently {{count($participants)}} participants in this lottery event </p>
   </div>
 </article>
+
+
 
 <a class="button is-link" href="{{route('home')}}">Back</a>
 
