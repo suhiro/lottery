@@ -10,7 +10,7 @@
     </div>
 @endif
 
-<form method="post" action="{{url('register')}}">
+<form method="post" action="{{url('participant_register')}}">
 	{{csrf_field()}}
 <div class="field">
   <label class="label">First name</label>

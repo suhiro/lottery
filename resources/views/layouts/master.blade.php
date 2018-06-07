@@ -12,6 +12,18 @@
   </head>
  <body>
  	@yield('content')
+
+
+<footer class="footer" style="position:fixed;bottom:0;width:100%">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        &copy; {{Carbon\Carbon::now()->year}} Hiro Su,  <strong>Powered</strong> by Magic Noodle Tech Team
+      </p>
+    </div>
+  </div>
+</footer>
+
  	@yield('pageJS')
  </body>
  </html>
