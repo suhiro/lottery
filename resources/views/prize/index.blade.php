@@ -27,8 +27,11 @@
         <td>{{$p->name}}</td>
          <td>{{$p->description}}</td>
             <td>{{$p->code}}</td>
-             <td>{{$p->participant_id}}</td>
-
+            @if($p->participant)
+             <td>{{$p->participant->firstName}} {{$p->participant->lastName}}</td>
+            @else
+            <td></td>
+            @endif
                <td>
                @if($p->redeemed)
                <span class="tag is-success">yes</span>

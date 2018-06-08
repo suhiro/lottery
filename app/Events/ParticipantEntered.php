@@ -17,7 +17,7 @@ class ParticipantEntered
     public $participant;
     public function __construct(Participant $participant)
     {
-        $this->participant = $perticipant;
+        $this->participant = $participant;
     }
 
     public function broadcastOn()

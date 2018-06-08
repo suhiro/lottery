@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Participant;
+use App\Events\ParticipantEntered;
 
 class ParticipantController extends Controller
 {
@@ -54,8 +55,9 @@ class ParticipantController extends Controller
             'location_id' => null,
             'code' => strtoupper(str_random(6))
         ]);
-        $participants = Participant::where('lottery_id',1)->where('valid',true)->get();
+        $participants = Participant::where('lottery_id',1)->get();
         if($participant){
+            event(new ParticipantEntered($participant));
             return view('result.submitted',compact('participant','participants'));
         } else {
             return 'error';

@@ -16,8 +16,9 @@
       <th>Last name</th>
       <th>phone</th>
       <th>email</th>
-      <th>code</th>
-      <th>valid</th>
+      <th>Code</th>
+      <th>Prize</th>
+
       <th>winner</th>
       <th>redeemed</th>
       <th>ip address</th>
@@ -34,14 +35,9 @@
           <td>{{$p->phone}}</td>
            <td>{{$p->email}}</td>
             <td>{{$p->code}}</td>
+            <td>{{$p->prize->name}}</td>
              
-              <td>
-               @if($p->valid)
-               <span class="tag is-success">yes</span>
-               @else
-               <span class="tag is-danger">no</span>
-               @endif
-                </td>
+            
 
             <td>
                @if($p->winner)

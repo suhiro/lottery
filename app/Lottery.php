@@ -22,4 +22,13 @@ class Lottery extends Model
     		'prize' => $prize,
     	];
     }
+
+    public function prize()
+    {
+        return $this->hasMany('App\Prize');
+    }
+    public function participant()
+    {
+        return $this->hasMany('App\Participant');
+    }
 }
