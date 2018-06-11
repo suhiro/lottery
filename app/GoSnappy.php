@@ -7,10 +7,15 @@ use GuzzleHttp\Client;
 
 class GoSnappy extends Model
 {
-    public static function go($link)
+    public static function getAuth()
     {
     	$client = new Client();
-    	$res = $client->request('GET',$link,[]);
-    	return $res;
+    	$link = 'https://gosnappy.io/v1/bp/login/6642';
+    	$body = '';
+    	$headers = [
+    		'Authorization' => 'Basic cmVnaXN0cmF0aW9uOmhpcm8yMDE4'
+    	];
+    	$res = $client->request('POST',$link,['headers'=>$headers]);
+    	return $res->getHeader('Authorization');
     }
 }
