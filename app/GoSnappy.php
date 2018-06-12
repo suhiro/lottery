@@ -18,4 +18,26 @@ class GoSnappy extends Model
     	$res = $client->request('POST',$link,['headers'=>$headers]);
     	return $res->getHeader('Authorization');
     }
+    public static function pushCustomer($participant){
+    	$client = new Client();
+    	$link = 'https://gosnappy.io/v1/rw/guest/directregister';
+    	$headers = [
+    		'Authorization' => self::getAuth(),
+    		'storeId' => '6642',
+    		'app-name' => 'RW',
+    		'Content-Type' => 'application/json'
+    	];
+    	$body = [
+    		'storeId' => '6642',
+    		'telephone' => $participant->phone,
+    		'guestAttributes' => [
+    			"NAME" => $participant->firstName.' '.$participant->lastName,
+    			"EMAIL" => $participant->email,
+    			"ip_address" => $participant->ip_address
+    		]
+
+    	];
+    	$res = $client->request('POST',$link,['headers' => $headers, 'body'=>json_encode($body)]);
+    	return $res;
+    }
 }
