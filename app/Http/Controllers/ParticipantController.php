@@ -39,14 +39,14 @@ class ParticipantController extends Controller
         $validatedData = $request->validate([
             'firstName' => 'required|max:32',
             'lastName' => 'required|max:32',
-            'phone' => 'required|unique:participants|max:16',
+            'phone' => 'required|unique:participants|max:17|min:10',
             'email' => 'required|unique:participants|max:100'
         ]);
         $participant = Participant::create([
             'lottery_id' => 1,
             'firstName' => $request->firstName,
             'lastName' => $request->lastName,
-            'phone' => $request->phone,
+            'phone' => self::unformatPhoneNumber($request->phone),
             'email' => $request->email,
             'valid' => true,
             'winner' => false,
@@ -107,5 +107,14 @@ class ParticipantController extends Controller
     public function destroy($id)
     {
         //
+    }
+    private function unformatPhoneNumber($number){
+        $arr = str_split($number);
+        $unformat = [];
+        foreach($arr as $number){
+            if( preg_match('/[0-9]/',$number) )
+            array_push($unformat,$number);
+        }
+        return implode('',$unformat);
     }
 }
