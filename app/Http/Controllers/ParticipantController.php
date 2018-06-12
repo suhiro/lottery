@@ -109,12 +109,7 @@ class ParticipantController extends Controller
         //
     }
     private function unformatPhoneNumber($number){
-        $arr = str_split($number);
-        $unformat = [];
-        foreach($arr as $number){
-            if( preg_match('/[0-9]/',$number) )
-            array_push($unformat,$number);
-        }
-        return implode('',$unformat);
+        preg_match_all('/[0-9]/',$number,$output);
+        return implode('',$output[0]);
     }
 }
