@@ -18,6 +18,7 @@ Route::post('/participant_register', 'ParticipantController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('adminHome');
+Route::get('/terms','ParticipantController@terms')->name('terms');
 
 Route::middleware('auth')->group(function(){
 	Route::get('/prizes', 'PrizeController@index')->name('prizes');
