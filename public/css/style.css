@@ -1,0 +1,288 @@
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*INDEX PAGE*/
+
+body{
+  font-size: 16px;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+#container
+{
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+header{
+/*  padding: 30vh 0;*/
+ /* background-color: Deepskyblue;*/
+  background: url(../image/MagicNoodle_Banner_BG.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  width: 100%;
+  max-height: 800px;
+}
+
+h1{
+  text-align: center;
+  font-size: 5em;
+}
+
+p{
+  word-spacing: 3px;
+  line-height: 1.8;
+  font-size: 1.2em;
+  text-align: justify;
+  margin: auto;
+}
+
+#anniversaryText
+{
+  display: block;
+  margin: 0 auto;
+  max-width: 38%;
+/*  position: relative;*/
+/*  background-color: red;*/
+}
+
+#anniversaryText2
+{
+  display: none;
+}
+
+#mainInfo
+{
+  width: 80%;
+  max-width: 960px;
+  margin: 5% auto;
+}
+
+#info2
+{
+  margin: 2% auto;
+}
+
+#prizes
+{
+  width: 90%;
+  margin: 0 auto;
+}
+
+#prizesList
+{
+  font-size: 1.3em;
+  line-height: 2;
+  font-weight: bold;
+  list-style: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+#prizesList2
+{
+  font-size: 1.2em;
+  line-height: 2;
+  margin: 3%;
+}
+
+#mainButton
+{
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: #1b9b83;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px 10px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+footer 
+{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #3c2415;
+   color: white;
+   text-align: center;
+}
+
+footer p
+{
+  font-size: 0.7em;
+}
+
+footer span
+{
+  margin-left: 50px;
+}
+
+
+
+
+
+/*FORM PAGE */
+
+
+
+
+
+/*THANKS PAGE*/
+#icon
+{
+  max-width: 10%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+#thanks
+{
+  margin: 0 auto;
+  margin-bottom: 8%;
+}
+
+#thanks h1
+{
+  font-size: 3em;
+  color: #3c2415;
+  margin-top: 2%;
+}
+
+
+/*RESPONSIVE*/
+@media (max-width: 600px){
+  header{
+    padding: 48vh 8vh;
+    background-image: url(../image/MagicNoodle_Mobile-04.jpg);
+    width: 100%;
+  }
+
+  h1{
+    font-size: 3em;
+  }
+  p{
+    font-size: 120%;
+    padding: 10px;
+  }
+ 
+  #anniversaryText
+  {
+    display: none;
+  }
+
+
+  #prizesList
+{
+  font-size: 1.2em;
+}
+
+  #prizesList2
+{
+  font-size: 1.1em;
+}
+
+    #thanks h1
+{
+  font-size: 2em;
+  color: #3c2415;
+  margin-top: 2%;
+}
+
+#mainButton
+{
+  margin-bottom: 15%;
+}
+
+}
+
+
+
+
+@media (max-width: 425px){
+  header{
+    padding: 40vh 8vh;
+    max-width: 100%
+  }
+
+  #prizesList
+{
+  font-size: 1.1em;
+}
+
+}
+
+
+
+
+@media (max-width: 320px){
+  header{
+    padding: 30vh 8vh;
+    max-width: 100%
+  }
+
+  #prizesList
+{
+  font-size: 0.9em;
+}
+
+  #prizesList2
+{
+  font-size: 1em;
+}
+
+  #mainButton
+{
+  margin-bottom: 30%;
+}
+}
+
+
+

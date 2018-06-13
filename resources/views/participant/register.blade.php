@@ -1,5 +1,10 @@
 @extends('layouts.master')
 @section('content')
+<section id="container">
+    <header>
+      <img src="image/MagicNoodle_Banner_Letters.png" id="anniversaryText" alt="Fifth Anniversary">
+    </header>
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -10,6 +15,8 @@
     </div>
 @endif
 
+<div class="columns is-centered">
+  <div class="column is-four-fifths ">
 <form method="post" action="{{url('participant_register')}}">
 	{{csrf_field()}}
 <div class="field">
@@ -78,4 +85,9 @@
   </div>
 </div>
 </form>
+
+</div>
+</div>
+
+
 @endsection

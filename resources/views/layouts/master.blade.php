@@ -6,23 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A lottery app created by Hiro Su">
 
-  <title>{{config('app.name')}}</title>
+ <title>Fifth Anniversary</title>
   <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201806022344">
   <link rel="canonical" href="https://bulma.io/">
+  <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
  <body>
  	@yield('content')
 
 
-<footer class="footer" style="position:fixed;bottom:0;width:100%">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        &copy; {{Carbon\Carbon::now()->year}} Hiro Su,  <strong>Powered</strong> by Magic Noodle Tech Team
-      </p>
-    </div>
-  </div>
-</footer>
+ <footer>
+    <p>© COPYRIGHT {{Carbon\Carbon::now()->year}} MAGIC NOODLE<span>DESIGNED BY CREATIVE GRAPHICS INC. </span></p>
+    <p>App Powered by Magic Noodle Tech Team</p>
+  </footer>
 
  	@yield('pageJS')
  </body>
