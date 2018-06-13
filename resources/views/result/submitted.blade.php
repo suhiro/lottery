@@ -28,7 +28,10 @@
     <p>Good Luck</p>
   </div>
   <div class="message-body">
-    Lottery Code 兑奖码:  <strong>{{$participant->code}}</strong>
+    <p>Lottery Code 兑奖码:  <strong>{{$participant->code}}</strong></p>
+    <p>您会收到包含此兑奖码的email, 请妥善保存兑奖码。如果中奖，此码为兑换凭证。</p>
+    <p>You will also receive an email containing this code. Please keep the code as it will be used to redeem the prize if you win!</p>
+
     <p>There are currently {{count($participants)}} participants in this lottery event.</p>
   </div>
 </article>
@@ -36,7 +39,7 @@
 </div>
 
   <div id="mainButton">
-      <a href="http://www.magicnoodle.ca"><button class="button">Finish 完成</button></a>
+      <a href="http://www.magicnoodle.ca"><button class="button is-link is-large">Finish 完成</button></a>
              
     </div>
  </section> 

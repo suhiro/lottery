@@ -57,14 +57,10 @@
 
     <div id="mainButton">
 
-      <a  href="{{route('participantRegister')}}"><button class="button">Enter Draw<span>開始</span></button></a>
+      <a  href="{{route('participantRegister')}}"><button class="button-cgi">Enter Draw<span>開始</span></button></a>
 
     </div>
  </section> 
-  
-  <footer>
-    <p>© COPYRIGHT {{Carbon\Carbon::now()->year}} MAGIC NOODLE<span>DESIGNED BY CREATIVE GRAPHICS INC. </span></p>
-    <p>App Powered by Magic Noodle Tech Team</p>
-  </footer>
+
     </body>
 </html>

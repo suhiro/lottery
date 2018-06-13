@@ -37,29 +37,17 @@
 
 <div class="field">
   <label class="label">Email</label>
-  <div class="control has-icons-left has-icons-right">
+  
     <input class="input " type="email" name="email" placeholder="Entry code will be send to this email" value="">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-  </div>
+  
   <!-- <p class="help is-danger">This email is invalid</p> -->
 </div>
 
 <div class="field">
   <label class="label">Phone</label>
-  <div class="control has-icons-left has-icons-right">
+  
     <input class="input " type="text" name="phone" placeholder="You maybe contacted through this phone number">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-  </div>
+
   <!-- <p class="help is-danger">This email is invalid</p> -->
 </div>
 
@@ -76,14 +64,10 @@
 
 
 
-<div class="field is-grouped">
-  <div class="control">
-    <button type="submit" class="button is-link">Submit</button>
-  </div>
-  <div class="control">
-    <button class="button is-text">Cancel</button>
-  </div>
-</div>
+
+    <button type="submit" class="button is-primary is-large">Submit</button>
+
+
 </form>
 
 </div>

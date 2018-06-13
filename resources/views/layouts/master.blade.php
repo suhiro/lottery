@@ -16,10 +16,10 @@
  	@yield('content')
 
 
- <footer>
+<!--  <footer>
     <p>© COPYRIGHT {{Carbon\Carbon::now()->year}} MAGIC NOODLE<span>DESIGNED BY CREATIVE GRAPHICS INC. </span></p>
     <p>App Powered by Magic Noodle Tech Team</p>
-  </footer>
+  </footer> -->
 
  	@yield('pageJS')
  </body>

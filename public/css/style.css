@@ -104,7 +104,7 @@ p{
   margin-bottom: 5%;
 }
 
-.button {
+.button-cgi {
   border-radius: 5px;
   background-color: #1b9b83;
   border: none;
@@ -118,14 +118,14 @@ p{
  
 }
 
-.button span {
+.button-cgi span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.button-cgi span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -134,11 +134,11 @@ p{
   transition: 0.5s;
 }
 
-.button:hover span {
+.button-cgi:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.button-cgi:hover span:after {
   opacity: 1;
   right: 0;
 }
