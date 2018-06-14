@@ -25,11 +25,11 @@ class ParticipantEnteredListener implements ShouldQueue
         Mail::to($event->participant)->send(new ParticipantNotifyMail($event->participant));
 
         $res = GoSnappy::pushCustomer($event->participant);
-        if($res->getStatusCode() == '200'){
-        	$message = json_decode($res->getBody());
-        } else {
-        	$message = "API to GoSnappy error";
-        }
-        Mail::to('suhiro@gmail.com')->send(new GoSnappyMail($event->participant,$message));
+        // if($res->getStatusCode() == '200'){
+        // 	$message = json_decode($res->getBody());
+        // } else {
+        // 	$message = "API to GoSnappy error";
+        // }
+        // Mail::to('suhiro@gmail.com')->send(new GoSnappyMail($event->participant,$message));
     }
 }
