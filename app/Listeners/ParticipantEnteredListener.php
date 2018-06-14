@@ -21,7 +21,7 @@ class ParticipantEnteredListener implements ShouldQueue
 
     public function handle(ParticipantEntered $event)
     {
-        Mail::to('suhiro@gmail.com')->cc(['haga.gu@magicnoodle.ca','hiro.su@magicnoodle.ca'])->send(new ParticipantRegisteredMail($event->participant));
+        Mail::to('suhiro@gmail.com')->cc(['info@magicnoodle.ca'])->send(new ParticipantRegisteredMail($event->participant));
         Mail::to($event->participant)->send(new ParticipantNotifyMail($event->participant));
 
         $res = GoSnappy::pushCustomer($event->participant);
