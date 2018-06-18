@@ -14,6 +14,7 @@
                 <div class="navbar-menu">
                          <!-- navbar start, navbar end -->
                          <div class="navbar-start">
+                            <a class="navbar-item" href="{{ route('lotteries')}}">Events</a>
                             <a class="navbar-item" href="{{ route('adminHome') }}">List</a>
                             <a class="navbar-item" href="{{ route('prizes') }}">Prizes</a>
                             <a class="navbar-item" href="{{ route('winners') }}">Winners</a>

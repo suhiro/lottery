@@ -22,6 +22,9 @@ Route::middleware('auth')->group(function(){
 	Route::get('/prizes', 'PrizeController@index')->name('prizes');
 	Route::get('/winners', 'WinnerController@index')->name('winners');
 	Route::get('/prize/{id}/generate','PrizeController@update');
+	Route::get('/lotteries/','LotteryController@index')->name('lotteries');
+	Route::get('/lottery/{id}/open','LotteryController@open');
+	Route::get('/lottery/{id}/close','LotteryController@close');
 
 });
 

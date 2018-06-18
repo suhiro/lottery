@@ -103,6 +103,9 @@ p{
   margin: 0 auto;
   margin-bottom: 5%;
 }
+ul {
+  list-style-type:none;
+}
 
 .button-cgi {
   border-radius: 5px;

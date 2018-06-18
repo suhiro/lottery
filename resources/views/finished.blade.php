@@ -20,22 +20,21 @@
     
     <div id="mainInfo"> 
       
-      <p id="info1">The current lottery event has finished. Thank you for your paticipation. The list of winners is below (last three digits of the lottery code). If you are the winner, out staff will contact you shortly.
-        <br>
-      感谢您的参与！ 本次抽奖活动已经结束啦！ 获奖者名单在下面可查询（兑奖码后三位）！ 如果您是幸运的中奖者，我们的员工会稍后主动联系您！
-      </p>
-      <p id="info1">Magic Noodle is celebrating our 5th anniversary and we'd like to share our joy with you. Starting from June 16, 2018, we'll be drawing daily for lucky winners with the following prizes:
-      </p>
+      <p id="info1">Magic Noodle would like to thank everyone for your continued support in making us who we are today. Our anniversary lottery event has finished, thank you for your participation and congratulations to those who won! The lucky winners are as following (please refer to last three digits of the lottery code):
 
-      <p id="info2">
-        生根，發芽，成長，五年風雨，一路走來，大槐樹衷心感謝您的支持。
-         <br>
-        從2018年6月16日起，我們將在活動期間內抽出總計共六位幸運兒，獲得不同數額的禮品卡
+      </p>
+       <p id="info2">生根，發芽，成長 — 5年風雨，一路走來，大槐樹衷心感謝各位的支持！
+本次5週年慶抽獎活動已結束，感謝大家的參與。
+獲獎名單如下（請對照兌獎碼后三位）：
+
       </p>
 
     <div id="prizes">
       <ul id="prizesList">
         <li>June 16: $50 value gift card x3 
+          <br>
+          6月16日: 價值$50的禮品卡 三張
+
           <ul>
             @foreach($prizes as $p)
               @if($p->level == 0)
@@ -45,6 +44,8 @@
           </ul>
         </li>
         <li>June 17: $100 value gift card x2
+          <br>6月17日: 價值$100的禮品卡 兩張
+
         <ul>
             @foreach($prizes as $p)
               @if($p->level == 1)
@@ -53,6 +54,8 @@
             @endforeach
           </ul></li>
         <li>June 18: $200 value gift card x1
+          <br>6月18日: 價值$200的禮品卡 一張
+
         <ul>
             @foreach($prizes as $p)
               @if($p->level == 2)
@@ -65,6 +68,12 @@
       
             <hr>
             <br>
+            <p>
+              If you are the winner, our staff will get in touch with you shortly to arrange for prize pickup, thank you again for your participation.
+            </p>
+            <p>
+我們的員工將盡快與幸運的中獎者聯繫安排領取獎品，再次感謝您的參與
+            </p>
    
     </div>
 
