@@ -7,9 +7,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'IndexController@index')->name('home');
 
 Route::get('/participant_register', 'ParticipantController@create')->name('participantRegister');
 
